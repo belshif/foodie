@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">		
+<html lang="en">
+
+{%extends "base.html"%}
+{%block content%}
+{%for item in results%}<font size=4px>
+<h2>{{item.r_name}}</h2>
+<div class="corheight  thumbnail span5">
+<img class="corheight span5" src="{{item.r_image}}"></div>
+<div ="span5 thumbnail pad">
+<b>  Name:</b> {{item.r_name}}<br/>
+<b>  Location:</b> {{item.r_location}}<br/>
+<b>  Delivery:</b> {{item.r_delivery}}<br/>
+<b>  Pickup:</b> {{item.r_delivery}}<br/>
+<b>  Rating:</b> {{item.r_rating}}<br/>
+<b>  Details:</b> {{item.r_detail}}<br/>
+<b>  Telephone:</b> {{item.r_tel}}<br/>
+<b>  Email:</b> {{item.r_email}}<br/>
+<b>  Website:</b> <a href="{{item.r_website}}">{{item.r_website}}</a>
+
+<br/>
+</div></div></font>
+{%endfor%}		
+{%endblock%}
+</html>
+
