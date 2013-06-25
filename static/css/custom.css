@@ -86,3 +86,18 @@
 .pad{
 	padding:10px
 }
+.mScroll{
+	overflow: hidden;
+}
+.mScroll:hover{
+	overflow-y: scroll; 
+}
+.heightC{
+	height: 310px
+} 
+.menuheight{
+	height: 482px
+}
+.headingtxt{
+	color: white;
+}

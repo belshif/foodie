@@ -46,7 +46,8 @@
 <div class="row pagewidth ">
   {%if results%}
 {% if query_browse|stringformat:"s" == "restaurant"  %}
-	{%for item in results%}
+	<div class="menuheight row">
+  {%for item in results%}
 			<div class="thumbnail span4 grid">
       <h3>{{item.i_name}}</h3>  
       <img class="menupicheight searchpicheight" src="{{item.i_image}}">
@@ -56,6 +57,7 @@
     </div>
       
     </div>
+
 	{%endfor%}
 {%endif%}
 {% if query_browse|stringformat:"s" == "cuisine" %}

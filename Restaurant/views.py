@@ -20,7 +20,7 @@ def index(request):
 
 def search_result(request):
 	query_browse = request.GET.get('b')
-	query_input = request.GET.get('q')
+	query_input = request.GET.get('q').strip()
 	query_cuisine=request.GET.get('c')
 	query_location=request.GET.get('l')
 	query_delivery = request.GET.get('d')
@@ -30,7 +30,7 @@ def search_result(request):
 	location = Location.objects.filter().distinct()
 	cuisine = Cuisine.objects.filter().distinct()
 	menu_item = Menu_Item.objects.filter().distinct()
-	d_item=menu_item.filter(i_name = "Yebeg T'bbs")
+	d_item=menu_item.all().order_by('-id')[:1]
 	results=Menu_Item.objects.filter().distinct()
 	
 	if query_input:
@@ -66,10 +66,12 @@ def search_result(request):
 def item_select(request,path):
 	try:
 		results=Restaurant.objects.filter(r_name=path)
-		return render_to_response("item_select.html",{"results": results})
+		qset=(Q(i_restaurant__r_name = path))
+		items=Menu_Item.objects.filter(qset)
+		return render_to_response("item_select.html",{"results": results,"items": items})
 
 	
-	except Page.DoesNotExist:
+	except Restaurant.DoesNotExist:
 		raise Http404("Page does not exist")
 
 

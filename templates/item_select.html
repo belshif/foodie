@@ -3,8 +3,9 @@
 
 {%extends "base.html"%}
 {%block content%}
+<div class="thumbnail heightC">
 {%for item in results%}<font size=4px>
-<h2>{{item.r_name}}</h2>
+
 <div class="corheight  thumbnail span5">
 <img class="corheight span5" src="{{item.r_image}}"></div>
 <div ="span5 thumbnail pad">
@@ -17,10 +18,22 @@
 <b>  Telephone:</b> {{item.r_tel}}<br/>
 <b>  Email:</b> {{item.r_email}}<br/>
 <b>  Website:</b> <a href="{{item.r_website}}">{{item.r_website}}</a>
-
 <br/>
 </div></div></font>
-{%endfor%}		
+{%endfor%}</div>
+<h1 align="center">Menu Items</h1>
+{%for item in items%}
+      <div class="thumbnail span4 grid">
+      <h3>{{item.i_name}}</h3>  
+      <img class="menupicheight searchpicheight" src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Cuisine: </b>{{item.i_cuisine}}<br/>
+      <b>Details:</b>{{item.i_detail}}<br/>
+      <div class="price pull-right">  <b >Price: </b>{{item.i_price}} $</div> 
+    </div>
+      
+    </div>
+  {%endfor%}
+
 {%endblock%}
 </html>
 
