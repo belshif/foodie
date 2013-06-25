@@ -1,0 +1,103 @@
+.bgcolor{
+	background-color: white;
+	margin-left:auto;
+	margin-right:auto;
+}
+.bgimg{
+	background-image: url("http://127.0.0.1:8000/restaurant/static/src/bg3.jpg");
+	margin-left:auto;
+	margin-right:auto;
+}
+}
+.searchimg{
+	background-image: url("http://127.0.0.1:8000/restaurant/static/src/searchitembg.png")
+}
+#myCarousel{
+	width:100%;
+	height:300px;
+	background-image:url("http://127.0.0.1:8000/restaurant/static/src/corbg.jpg");
+}
+.hero-unit{
+    background-color: #21120b
+ }
+ .pagewidth{
+ 	width: 1000px;
+ }
+ .pageheight{
+ 	height: 1800px;
+ }
+ .cor{
+ 	
+ 	height: 300px;
+ 	width: 1000px;
+ }
+ .corheight{
+ 	height:300px;
+ }
+.logo{
+	height: 82px;
+}
+.txt{
+	font-size: 11px
+}
+.pre-scrollable{
+	height:1270px;
+}
+.welcomemsg{
+	background-image:url("http://127.0.0.1:8000/restaurant/static/src/searchitembg.png");
+}
+.navi{
+	margin-top: 40px
+}
+.menupicheight{
+	height: 160px;
+}
+.break-word {
+  word-wrap: break-word;
+}
+.transparent{
+	opacity: 0
+	opacity:0.5;  
+     filter:alpha(opacity=50);  
+     -moz-opacity:0.5;  
+}
+.grid{
+	height: 325px
+}
+.detail{
+	height:96px;
+	font-size: 14px;
+}
+.opaque{
+	opacity: 1
+}
+.hero-unit{
+	margin-left: 1px
+}
+.searchpicheight{
+	width: 300px;
+}
+.price{
+	font-size: 16px
+}
+.cbtn{
+	background-image:url("http://127.0.0.1:8000/restaurant/static/src/bbutton.png") 
+}
+.pad{
+	padding:10px
+}
+.mScroll{
+	overflow: hidden;
+}
+.mScroll:hover{
+	overflow-y: scroll; 
+}
+.heightC{
+	height: 310px
+} 
+.menuheight{
+	height: 482px
+}
+.headingtxt{
+	color: white;
+}
