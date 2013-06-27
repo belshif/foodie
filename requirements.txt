@@ -5,6 +5,7 @@ MarkupSafe==0.18
 Werkzeug==0.9.1
 argparse==1.2.1
 dj-database-url==0.2.1
+greenlet==0.4.1
 gunicorn==0.17.4
 itsdangerous==0.21
 psycopg2==2.5
