@@ -10,7 +10,7 @@
     <div class="thumbnail grid">
       <h3>{{item.i_name}}</h3>
       <img class="menupicheight searchpicheight" src="{{item.i_image}}">
-      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/restaurant/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
       <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
     {%endfor%}
   </li>
@@ -19,13 +19,13 @@
     <div class="thumbnail grid">
       <h3>{{item.i_name}}</h3>
       <img class="menupicheight searchpicheight"  src="{{item.i_image}}">
-      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/restaurant/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
       <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
     
     {%endfor%}
   </li>
   <li class="span4">
-    <form action="http://127.0.0.1:8000/restaurant/search" method = 'GET'>
+    <form action="http://127.0.0.1:8000/search" method = 'GET'>
       <div class="container">
     <lable for = 'b'> Browse By:</lable><br/>
     <select class ="" name = 'b'>
@@ -61,10 +61,10 @@
     <input type="checkbox" name="d">Delivery
     <input type="checkbox" name="p">Pick Up 
     <br/><br/><!--<a class="btn btn-primary btn-large" type="submit" value="Search" align ="center">Search &raquo</a>-->
-        <input class="btn btn-large " type="submit" value="Search &raquo" href="http://127.0.0.1:8000/restaurant/search"></div></div>
+        <input class="btn btn-large " type="submit" value="Search &raquo" href="http://127.0.0.1:8000/search"></div></div>
     </form>
   </li>   
-  <footer><div class ="row"><div class="navbar navbar-inverse "><div class="navbar-inner"><div class="container "><div class="span1 offset"></div><a class="brand" href="http://127.0.0.1:8000/restaurant">foodie!!</a><ul class = "nav "><li><a>Home</a></li><li><a>About Us</a></li></ul><div class="span4"> </div></div></div></div>  </div></footer>
+  <footer><div class ="row"><div class="navbar navbar-inverse "><div class="navbar-inner"><div class="container "><div class="span1 offset"></div><a class="brand" href="http://127.0.0.1:8000">foodie!!</a><ul class = "nav "><li><a>Home</a></li><li><a>About Us</a></li></ul><div class="span4"> </div></div></div></div>  </div></footer>
 	
 {%endblock%}
 
