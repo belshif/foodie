@@ -1,5 +1,6 @@
 # Django settings for foodie project.
 import os
+import Restaurant
 
 
 DEBUG = True
