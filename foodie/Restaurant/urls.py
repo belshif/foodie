@@ -5,7 +5,7 @@ from django.views.static import *
 from django.conf import settings
 
 urlpatterns = patterns('',
-(r'^$',index),
+(r'^',index),
 #(r'^search$',search_result),
 (r'^search/(?P<path>.*)/$', item_select),
 (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),

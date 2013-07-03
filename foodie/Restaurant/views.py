@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import render_to_response
-import models
+from models import * 
 from django.template.loader import get_template
 from django.http import HttpResponse
 from django.template import Context
