@@ -40,7 +40,7 @@
     <input type="checkbox" name="d">Delivery
     <input type="checkbox" name="p">Pick Up 
    <!--<a class="btn btn-primary btn-large" type="submit" value="Search" align ="center">Search &raquo</a>-->
-        <input class="btn btn-large" type="submit" value="Search &raquo" href="http://127.0.0.1:8000/restaurant/search"></div></div>
+        <input class="btn btn-large" type="submit" value="Search &raquo" href="search\"></div></div>
     </form>
 
 <div class="row pagewidth ">
@@ -51,7 +51,7 @@
 			<div class="thumbnail span4 grid">
       <h3>{{item.i_name}}</h3>  
       <img class="menupicheight searchpicheight" src="{{item.i_image}}">
-      <div class="thumbnail detail"><b>Restaurant: <a href="http://127.0.0.1:8000/restaurant/search/{{item.i_restaurant}}"></b>{{item.i_restaurant}}</a><br/>
+      <div class="thumbnail detail"><b>Restaurant: <a href="search/{{item.i_restaurant}}"></b>{{item.i_restaurant}}</a><br/>
       <b>Details:</b>{{item.i_detail}}<br/>
       <div class="price pull-right">  <b >Price: </b>{{item.i_price}} $</div>
     </div>
@@ -79,7 +79,7 @@
 </div>
 <div class="row pad">
   <div class="offset span4"></div>
-  <img class="span4" src="http://127.0.0.1:8000/restaurant/static/src/no_result.jpg">
+  <img class="span4" src="static/src/no_result.jpg">
   </div>
 
 {%endif%}

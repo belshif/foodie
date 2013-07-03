@@ -2,27 +2,19 @@
 <html lang="en">
 <head>
 
-<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="static/css/custom.css" type="text/css" />
 
 
   <!--<link rel="stylesheet" href="../static/bootstrap.min.css">
   <!--<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/bootstrap.min.css" />-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script> 
-<script>
-      $(document).ready(function(){
-        $('#myCarousel').carousel({
-          interval: 5000,
-        });
-      });
-    </script>
+  
 
   <title>Welcome To Foodie || Index</title>
 </head>
 <body class ="bgimg pagewidth" >
 <div class="pagewidth">
-<div class="row logo"><img src="http://127.0.0.1:8000/static/src/foodie1.png"></div>
+<div class="row logo"><img src="static/src/foodie1.png"></div>
 
 <div class ="row"><div class="navbar navbar-inverse "><div class="navbar-inner"><div class="container "><div class="span1 offset"></div><a class="brand" href="http://127.0.0.1:8000">foodie!!</a><ul class = "nav "><li><a href="http://127.0.0.1:8000">Home</a></li><li><a>About Us</a></li></ul><div class="span4"> </div></div></div></div> </div>
 
@@ -32,15 +24,15 @@
 
 
   <div class="carousel-inner">
-    <div class="item"><img class="cor" src="http://127.0.0.1:8000/static/src/banner2.png" alt="">
+    <div class="item"><img class="cor" src="static/src/banner2.png" alt="">
       <div class="container">
         <div class="carousel-caption "><div class="container"><h1 class="headingtxt">Snacks</h1><p>The best place to get fastfood with speed</p></div>
       </div></div></div>
-    <div class="item "><img class="cor" src="http://127.0.0.1:8000/static/src/banner4.png" alt="">
+    <div class="item "><img class="cor" src="static/src/banner4.png" alt="">
       <div class="container">
         <div class="carousel-caption"><h1 class="headingtxt">Desserts</h1><p>The most tasty and delicious desserts from the best restaurants</p></div>
       </div></div>
-    <div class="item active"><div class="span2 offset"></div><img class="corheight pull-right" src="http://127.0.0.1:8000/static/src/Woman.png" alt=""><div class="cor"><div class="container">
+    <div class="item active"><div class="span2 offset"></div><img class="corheight pull-right" src="static/src/Woman.png" alt=""><div class="cor"><div class="container">
         <div class="carousel-caption "><h1 class="headingtxt">Foodie</h1><p>Where we make food a priority</p></div>
       </div></div></div>
   </div>
@@ -52,11 +44,17 @@
 
     
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script> 
+<script>
+      $(document).ready(function(){
+        $('#myCarousel').carousel({
+          interval: 5000,
+        });
+      });
+    </script>
 
 
-<script src="http://127.0.0.1:8000/restaurant/static//js/bootstrap-carousel.js"></script>
-<script src="http://127.0.0.1:8000/restaurant/static//js/bootstrap-tab.js"></script>
-<script src="http://127.0.0.1:8000/restaurant/static//js/bootstrap-scrollspy.js"></script>
 </body>
 </html>
 

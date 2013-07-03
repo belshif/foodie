@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^foodie/', include('foodie.foo.urls')),
     #(r'^', include('Restaurant.urls')),
     (r'^$',index),
-	#(r'^search$',search_result),
+	(r'^search$',search_result),
 	(r'^search/(?P<path>.*)/$', item_select),
 	(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
 

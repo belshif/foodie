@@ -4,18 +4,18 @@
 	margin-right:auto;
 }
 .bgimg{
-	background-image: url("http://127.0.0.1:8000/static/src/bg3.jpg");
+	background-image: url("/static/src/bg3.jpg");
 	margin-left:auto;
 	margin-right:auto;
 }
 }
 .searchimg{
-	background-image: url("http://127.0.0.1:8000/static/src/searchitembg.png")
+	background-image: url("static/src/searchitembg.png")
 }
 #myCarousel{
 	width:100%;
 	height:300px;
-	background-image:url("http://127.0.0.1:8000/static/src/corbg.jpg");
+	background-image:url("static/src/corbg.jpg");
 }
 .hero-unit{
     background-color: #21120b
@@ -44,7 +44,7 @@
 	height:1270px;
 }
 .welcomemsg{
-	background-image:url("http://127.0.0.1:8000/restaurant/static/src/searchitembg.png");
+	background-image:url("static/src/searchitembg.png");
 }
 .navi{
 	margin-top: 40px
@@ -81,7 +81,7 @@
 	font-size: 16px
 }
 .cbtn{
-	background-image:url("http://127.0.0.1:8000/restaurant/static/src/bbutton.png") 
+	background-image:url("static/src/bbutton.png") 
 }
 .pad{
 	padding:10px
