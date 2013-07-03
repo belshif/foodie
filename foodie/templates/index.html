@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+
+{%extends "base.html"%}
+
+{%block content%}
+<ul class="thumbnails">
+  <li class="span4">
+    {%for item in popular%}
+    <div class="thumbnail grid">
+      <h3>{{item.i_name}}</h3>
+      <img class="menupicheight searchpicheight" src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
+    {%endfor%}
+  </li>
+  <li class="span4">
+    {%for item in s_pick%}
+    <div class="thumbnail grid">
+      <h3>{{item.i_name}}</h3>
+      <img class="menupicheight searchpicheight"  src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="http://127.0.0.1:8000/search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
+    
+    {%endfor%}
+  </li>
+  <li class="span4">
+    <form action="http://127.0.0.1:8000/search" method = 'GET'>
+      <div class="container">
+    <lable for = 'b'> Browse By:</lable><br/>
+    <select class ="" name = 'b'>
+    <option value='restaurant'>Restaurant Name</option>
+    <option value='cuisine'>Restaurant Cuisine</option>
+    </select><br/>
+    <input class ="" type="text" name="q" value ="{{query|escape}}">
+    </br>
+    <lable class ="" for = 'c'>Cuisine</lable><br/>
+    <select class ="" name = 'c'>
+    <option value=''>All</option>
+    {%if cuisine%}
+      {%for cu in cuisine%}
+      <option value='{{cu}}'>{{cu}}</option>
+      {%endfor%}
+    {%else%}
+      <option value='Cuisine'>No Cuisine</option>
+    {%endif%}
+    </select><br/>
+  
+    <lable for = 'l'>Location</lable><br/>
+    <select class ="" name = 'l'>
+    <option value=''>All</option>
+    {%if location%}
+        {%for lo in location%}
+      <option value='{{lo}}'>{{lo}}</option>
+      {%endfor%}
+    {%else%}
+    <option value='NoLocation'>No Location</option>
+    {%endif%}
+    </select>
+    <br/>
+    <input type="checkbox" name="d">Delivery
+    <input type="checkbox" name="p">Pick Up 
+    <br/><br/><!--<a class="btn btn-primary btn-large" type="submit" value="Search" align ="center">Search &raquo</a>-->
+        <input class="btn btn-large " type="submit" value="Search &raquo" href="http://127.0.0.1:8000/search"></div></div>
+    </form>
+  </li>   
+  <footer><div class ="row"><div class="navbar navbar-inverse "><div class="navbar-inner"><div class="container "><div class="span1 offset"></div><a class="brand" href="http://127.0.0.1:8000">foodie!!</a><ul class = "nav "><li><a>Home</a></li><li><a>About Us</a></li></ul><div class="span4"> </div></div></div></div>  </div></footer>
+	
+{%endblock%}
+
+
+
+</html>

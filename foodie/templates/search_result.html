@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">		
+<html lang="en">
+
+{%extends "base.html"%}
+<div class="span12">
+
+{%block content%}
+<div class="row">
+	<form  method = 'GET'>
+      <div class="container">
+    <lable for = 'b'> Browse By:</lable>
+    <select class ="" name = 'b'>
+    <option value='restaurant'>Restaurant Name</option>
+    <option value='cuisine'>Restaurant Cuisine</option>
+    </select>
+    <input class ="" type="text" name="q" value ="{{query|escape}}">
+    <lable class ="" for = 'c'>Cuisine</lable>
+    <select class ="" name = 'c'>
+    <option value=''>All</option>
+    {%if cuisine%}
+      {%for cu in cuisine%}
+      <option value='{{cu}}'>{{cu}}</option>
+      {%endfor%}
+    {%else%}
+      <option value='Cuisine'>No Cuisine</option>
+    {%endif%}
+    </select>
+  <br/>
+    <lable for = 'l'>Location</lable>
+    <select class ="" name = 'l'>
+    <option value=''>All</option>
+    {%if location%}
+        {%for lo in location%}
+      <option value='{{lo}}'>{{lo}}</option>
+      {%endfor%}
+    {%else%}
+    <option value='NoLocation'>No Location</option>
+    {%endif%}
+    </select>
+    <input type="checkbox" name="d">Delivery
+    <input type="checkbox" name="p">Pick Up 
+   <!--<a class="btn btn-primary btn-large" type="submit" value="Search" align ="center">Search &raquo</a>-->
+        <input class="btn btn-large" type="submit" value="Search &raquo" href="http://127.0.0.1:8000/restaurant/search"></div></div>
+    </form>
+
+<div class="row pagewidth ">
+  {%if results%}
+{% if query_browse|stringformat:"s" == "restaurant"  %}
+	<div class="menuheight row">
+  {%for item in results%}
+			<div class="thumbnail span4 grid">
+      <h3>{{item.i_name}}</h3>  
+      <img class="menupicheight searchpicheight" src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Restaurant: <a href="http://127.0.0.1:8000/restaurant/search/{{item.i_restaurant}}"></b>{{item.i_restaurant}}</a><br/>
+      <b>Details:</b>{{item.i_detail}}<br/>
+      <div class="price pull-right">  <b >Price: </b>{{item.i_price}} $</div>
+    </div>
+      
+    </div>
+
+	{%endfor%}
+{%endif%}
+{% if query_browse|stringformat:"s" == "cuisine" %}
+{%for item in results%}
+      <div class="thumbnail span4 grid">
+      <h3>{{item.i_name}}</h3>  
+      <img class="menupicheight searchpicheight" src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Cuisine: </b>{{item.i_cuisine}}<br/>
+      <b>Details:</b>{{item.i_detail}}<br/>
+      <div class="price pull-right">  <b >Price: </b>{{item.i_price}} $</div> 
+    </div>
+      
+    </div>
+  {%endfor%}
+{%endif%}
+{%else%}
+<div align="center">
+<font size =10px><b>Did not find any item!!!!</br></b></font>
+</div>
+<div class="row pad">
+  <div class="offset span4"></div>
+  <img class="span4" src="http://127.0.0.1:8000/restaurant/static/src/no_result.jpg">
+  </div>
+
+{%endif%}
+</div>
+</div>
+		
+{%endblock%}
+</html>
+
