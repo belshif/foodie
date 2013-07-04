@@ -5,7 +5,25 @@
 
 {%block content%}
 <ul class="thumbnails">
- 
+ <li class="span4">
+    {%for item in popular%}
+    <div class="thumbnail grid">
+      <h3>{{item.i_name}}</h3>
+      <img class="menupicheight searchpicheight" src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
+    {%endfor%}
+  </li>
+  <li class="span4">
+    {%for item in s_pick%}
+    <div class="thumbnail grid">
+      <h3>{{item.i_name}}</h3>
+      <img class="menupicheight searchpicheight"  src="{{item.i_image}}">
+      <div class="thumbnail detail"><b>Restaurant: </b><a href="search/{{item.i_restaurant}}">{{item.i_restaurant}}</a><br/><b>Details:</b>{{item.i_detail}}<br/>
+      <div class="pull-right"><b >Price: </b>{{item.i_price}}</div></div>
+    
+    {%endfor%}
+  </li>
   <li class="span4">
     <form action="search" method = 'GET'>
       <div class="container">
